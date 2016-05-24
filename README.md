@@ -14,7 +14,7 @@
 ## Quick Start
 
 ```bash
-$ git clone https://github.com/dotzero/node-url-shortener nus
+$ git clone https://github.com/fadeit/node-url-shortener nus
 $ cd nus
 $ npm install
 $ node app
@@ -39,7 +39,7 @@ Options:
 ## Installation on production
 
 ```bash
-$ git clone https://github.com/dotzero/node-url-shortener nus
+$ git clone https://github.com/fadeit/node-url-shortener nus
 $ cd nus
 $ npm install --production
 $ NODE_ENV=production node app --url "http://example.com"
