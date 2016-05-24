@@ -3,6 +3,14 @@
     this._api_ = '/api/v1/shorten/';
     this._form_ = '#nus';
     this._errormsg_ = 'An error occurred shortening that link';
+    var self = this;
+    var clipboard = new Clipboard('#copy');
+    clipboard.on('success', function(e) {
+        return self.alert('Copied to clipboard!');
+    });
+    clipboard.on('error', function(e) {
+        console.log("Error copying to clipboard", e);
+    });
   };
 
   _nus.prototype.init = function () {
@@ -36,6 +44,8 @@
       if (data.hasOwnProperty('status_code') && data.hasOwnProperty('status_txt')) {
         if (parseInt(data.status_code) == 200) {
           self._input_.val(data.short_url).select();
+          $('#shorten').hide();
+          $('#copy').show();
           return self.alert('Copy your shortened url');
         } else {
           self._errormsg_ = data.status_txt;
