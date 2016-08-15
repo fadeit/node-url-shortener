@@ -42,7 +42,7 @@ Options:
 $ git clone https://github.com/fadeit/node-url-shortener nus
 $ cd nus
 $ npm install --production
-$ NODE_ENV=production cd /path/to/nuc && /usr/bin/forever start app.js --port 8000 --domain https://your.domain
+$ NODE_ENV=production cd /path/to/nus && /usr/bin/forever start app.js --port 8000 --domain https://your.domain
 ```
 
 ## Tests
